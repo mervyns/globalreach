@@ -1,13 +1,9 @@
 import { JSX, SVGProps } from 'react';
 
-import { Button } from '@/components/ui/button';
 import HeaderComponent from '@/components/Header';
 import Image from 'next/image';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
-import { Textarea } from '@/components/ui/textarea';
 
 export default function HomePage() {
   return (
