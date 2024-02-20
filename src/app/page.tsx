@@ -1,3 +1,5 @@
+'use client';
+
 import { JSX, SVGProps } from 'react';
 
 import HeaderComponent from '@/components/Header';
@@ -10,6 +12,15 @@ export default function HomePage() {
     <>
       <HeaderComponent />
       <div className='container flex flex-col items-center gap-2 pt-12 px-4 md:px-6'>
+        <div className='mx-auto w-full max-w-7xl grid gap-4'>
+          <Image
+            alt='hero section with image'
+            className='w-full object-cover object-center rounded-lg'
+            src='/hero.jpg'
+            height={600}
+            width={3200}
+          />
+        </div>
         <h1 className='text-3xl font-bold text-center tracking-tighter md:text-5xl my-6'>
           Software Services & Electronics
         </h1>
@@ -18,9 +29,9 @@ export default function HomePage() {
           high-quality electronics.
         </p>
       </div>
-      <Separator className='my-12 md:my-24' />
+      <Separator className='my-8 md:my-12' />
       <section>
-        <div className='container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10'>
+        <div className='container grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10 py-4 md:py-10'>
           <div className='space-y-3'>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
               Our Services
@@ -30,7 +41,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className='mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3'>
-            <div className='grid gap-1'>
+            <div className='grid gap-2'>
               <CodeIcon className='w-12 h-12 mx-auto' />
               <h3 className='text-lg font-bold'>Software Development</h3>
               <p className='text-sm text-gray-500 dark:text-gray-400'>
@@ -38,7 +49,7 @@ export default function HomePage() {
                 service. Our engineers will build your dream software products.
               </p>
             </div>
-            <div className='grid gap-1'>
+            <div className='grid gap-2'>
               <GitCommitIcon className='w-12 h-12 mx-auto' />
               <h3 className='text-lg font-bold'>Server Management</h3>
               <p className='text-sm text-gray-500 dark:text-gray-400'>
@@ -46,7 +57,7 @@ export default function HomePage() {
                 servers running smoothly with our management expertise.
               </p>
             </div>
-            <div className='grid gap-1'>
+            <div className='grid gap-2'>
               <MonitorIcon className='w-12 h-12 mx-auto' />
               <h3 className='text-lg font-bold'>
                 Performance Monitoring & Analytics
@@ -125,7 +136,7 @@ export default function HomePage() {
       </section>
       <footer className='py-12 md:py-24'>
         <div className='container grid items-center gap-4 px-4 text-center md:px-6'>
-          <nav className='flex flex-col gap-2 mx-auto text-sm sm:flex-row sm:gap-4 md:text-base lg:gap-2'>
+          <nav className='flex flex-col gap-2 mx-auto text-sm sm:flex-row md:text-base lg:gap-4'>
             <Link
               className='flex-1 flex items-center justify-center text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline'
               href='/'
@@ -146,7 +157,7 @@ export default function HomePage() {
             </Link>
           </nav>
           <div className='mx-auto border-t w-full max-w-sm border-gray-200 dark:border-gray-800' />
-          <div className='flex flex-col gap-2 min-[400px]:flex-row justify-center text-sm'>
+          <div className='flex flex-col gap-4 min-[400px]:flex-row justify-center text-sm'>
             <p className='text-gray-500 dark:text-gray-400'>
               © 2024 Global Reach IT Ltd
             </p>

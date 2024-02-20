@@ -14,65 +14,78 @@ import Link from 'next/link';
 
 export default function HeaderComponent() {
   return (
-    <header>
-      <div className='bg-gray-50/90 border-t border-b border-gray-20 dark:bg-gray-950 dark:border-gray-800'>
-        <div className='container py-4 px-8'>
-          <div className='grid items-center gap-4 grid-cols-1 md:grid-cols-2'>
-            <div className='flex items-center space-x-2'>
-              <Link href='/'>
-                <p className='text-sm md:text-md font-medium text-gray-900 dark:text-gray-50'>
-                  Global Reach IT Services Ltd.
-                </p>
-              </Link>
-              <div className='flex md:hidden justify-end text-sm'>
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <NavigationMenuLink>
-                          <Link
-                            className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline p-2'
-                            href='#about'
-                          >
-                            About Us
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink>
-                          <Link
-                            className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline p-2'
-                            href='/contact'
-                          >
-                            Contact
-                          </Link>
-                        </NavigationMenuLink>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
+    <div className='bg-gray-50/90 border-t border-b border-gray-20 dark:bg-gray-950 dark:border-gray-800'>
+      <div className='container py-4 px-8'>
+        <div className='grid items-center gap-4 grid-cols-1 md:grid-cols-2'>
+          <div className='flex items-center space-x-2'>
+            <Link href='/'>
+              <p className='text-sm md:text-xl font-medium text-gray-900 dark:text-gray-50'>
+                Global Reach IT Services Ltd.
+              </p>
+            </Link>
+            <div className='flex md:hidden justify-end text-sm'>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <NavigationMenuLink>
+                        <Link
+                          className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline p-2'
+                          href='/#about'
+                        >
+                          About Us
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink>
+                        <Link
+                          className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline p-2'
+                          href='/products'
+                        >
+                          Products
+                        </Link>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink>
+                        <Link
+                          className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline p-2'
+                          href='/contact'
+                        >
+                          Contact
+                        </Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
+          </div>
 
-            <div className='hidden md:flex justify-end space-x-4 text-sm'>
-              <Link
-                className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline'
-                href='#about'
-              >
-                <UserIcon className='w-4 h-4 mx-2' />
-                About Us
-              </Link>
-              <Link
-                className='flex items-center space-x-2 mx-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline'
-                href='/contact'
-              >
-                <MailIcon className='w-4 h-4 mx-2' />
-                Contact Us
-              </Link>
-            </div>
+          <div className='hidden md:flex justify-end space-x-4 text-sm'>
+            <Link
+              className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline text-lg'
+              href='/#about'
+            >
+              <UserIcon className='w-4 h-4 mx-2' />
+              About Us
+            </Link>
+            <Link
+              className='flex items-center space-x-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline text-lg'
+              href='/products'
+            >
+              <ShoppingCartIcon className='w-4 h-4 mx-2' />
+              Products
+            </Link>
+            <Link
+              className='flex items-center space-x-2 mx-2 text-gray-900 hover:underline dark:text-gray-50 dark:hover:underline text-lg'
+              href='/contact'
+            >
+              <MailIcon className='w-4 h-4 mx-2' />
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
