@@ -20,7 +20,7 @@ export default function HeaderComponent() {
           <div className='flex items-center space-x-2'>
             <Link href='/'>
               <p className='text-sm md:text-xl font-medium text-gray-900 dark:text-gray-50'>
-                Global Reach IT Services Ltd.
+                Long Dragon Tech
               </p>
             </Link>
             <div className='flex md:hidden justify-end text-sm'>
